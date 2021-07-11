@@ -1,0 +1,442 @@
+[
+  {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "5"
+      },
+      {
+        "id": "1",
+        "text": "4"
+      },
+      {
+        "id": "2",
+        "text": "6"
+      },
+      {
+        "id": "3",
+        "text": "5.25"
+      }
+    ],
+    "text": "1.25 + 3.75 = ?"
+  },
+  {
+    "answerId": "2",
+    "answers": [
+      {
+        "id": "0",
+        "text": "2"
+      },
+      {
+        "id": "1",
+        "text": "0"
+      },
+      {
+        "id": "2",
+        "text": "-1"
+      },
+      {
+        "id": "3",
+        "text": "3"
+      }
+    ],
+    "text": "2 - 3 = ?"
+  },
+  {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Undefined"
+      },
+      {
+        "id": "1",
+        "text": "0"
+      },
+      {
+        "id": "2",
+        "text": "Infinity"
+      },
+      {
+        "id": "3",
+        "text": "100"
+      }
+    ],
+    "text": "0 / 0 = ?"
+  },
+  {
+    "answerId": "3",
+    "answers": [
+      {
+        "id": "0",
+        "text": "10"
+      },
+      {
+        "id": "1",
+        "text": "5"
+      },
+      {
+        "id": "2",
+        "text": "2"
+      },
+      {
+        "id": "3",
+        "text": "-2"
+      }
+    ],
+    "text": "4(x + 5) = 12. x = ?"
+  },
+  {
+    "answerId": "1",
+    "answers": [
+      {
+        "id": "0",
+        "text": "10"
+      },
+      {
+        "id": "1",
+        "text": "8"
+      },
+      {
+        "id": "2",
+        "text": "-15"
+      },
+      {
+        "id": "3",
+        "text": "6"
+      }
+    ],
+    "text": "2x = 16. x = ?"
+  },
+  {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "4 and -4"
+      },
+      {
+        "id": "1",
+        "text": "2 and -2"
+      },
+      {
+        "id": "2",
+        "text": "4"
+      },
+      {
+        "id": "3",
+        "text": "-4"
+      }
+    ],
+    "text": "x * x = 16. x = ?"
+  },
+  {
+    "answerId": "2",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Stockholm"
+      },
+      {
+        "id": "1",
+        "text": "Paris"
+      },
+      {
+        "id": "2",
+        "text": "Berlin"
+      },
+      {
+        "id": "3",
+        "text": "Tbilisi"
+      }
+    ],
+    "text": "What is the capital of Germany?"
+  },
+  {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Paris"
+      },
+      {
+        "id": "1",
+        "text": "Wien"
+      },
+      {
+        "id": "2",
+        "text": "Roma"
+      },
+      {
+        "id": "3",
+        "text": "Tallinn"
+      }
+    ],
+    "text": "What is the capital of France?"
+  },
+  {
+    "answerId": "3",
+    "answers": [
+      {
+        "id": "0",
+        "text": "USA"
+      },
+      {
+        "id": "1",
+        "text": "Georgia"
+      },
+      {
+        "id": "2",
+        "text": "Brazil"
+      },
+      {
+        "id": "3",
+        "text": "China"
+      }
+    ],
+    "text": "Which country is the first in terms of population?"
+  },
+  {
+    "answerId": "1",
+    "answers": [
+      {
+        "id": "0",
+        "text": "9"
+      },
+      {
+        "id": "1",
+        "text": "5"
+      },
+      {
+        "id": "2",
+        "text": "10"
+      },
+      {
+        "id": "3",
+        "text": "7"
+      }
+    ],
+    "text": "How many oceans are there in the world?"
+  },
+  {
+    "answerId": "2",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "id": "1",
+        "text": "Ludwig van Beethoven"
+      },
+      {
+        "id": "2",
+        "text": "William Shakespeare"
+      },
+      {
+        "id": "3",
+        "text": "Frederic Chopin"
+      }
+    ],
+    "text": "Who is the author of Romeo and Juliet?"
+  },
+  {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Zeus"
+      },
+      {
+        "id": "1",
+        "text": "Poseidon"
+      },
+      {
+        "id": "2",
+        "text": "Aphrodite"
+      },
+      {
+        "id": "3",
+        "text": "Hera"
+      }
+    ],
+    "text": "The main god of Olympus in Greek mythology?"
+  },
+  {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Egypt"
+      },
+      {
+        "id": "1",
+        "text": "Germany"
+      },
+      {
+        "id": "2",
+        "text": "France"
+      },
+      {
+        "id": "3",
+        "text": "Sweden"
+      }
+    ],
+    "text": "Where the pyramid of Cheops is located?"
+  },
+  {
+    "answerId": "2",
+    "answers": [
+      {
+        "id": "0",
+        "text": "15"
+      },
+      {
+        "id": "1",
+        "text": "20"
+      },
+      {
+        "id": "2",
+        "text": "8"
+      },
+      {
+        "id": "3",
+        "text": "1"
+      }
+    ],
+    "text": "How many planets are in the solar system?"
+  },
+  {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "12"
+      },
+      {
+        "id": "1",
+        "text": "11"
+      },
+      {
+        "id": "2",
+        "text": "15"
+      },
+      {
+        "id": "3",
+        "text": "16"
+      }
+    ],
+    "text": "Choose the square root of 144"
+  },
+  {
+    "answerId": "3",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Dog"
+      },
+      {
+        "id": "1",
+        "text": "Zebra"
+      },
+      {
+        "id": "2",
+        "text": "Cat"
+      },
+      {
+        "id": "3",
+        "text": "Cow"
+      }
+    ],
+    "text": "Choose a sacred animal in India"
+  },
+  {
+    "answerId": "1",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Cat"
+      },
+      {
+        "id": "1",
+        "text": "Camel"
+      },
+      {
+        "id": "2",
+        "text": "Dog"
+      },
+      {
+        "id": "3",
+        "text": "Snake"
+      }
+    ],
+    "text": "What animal is called 'The ship of the desert'?"
+  },
+  {
+    "answerId": "1",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Bucharest"
+      },
+      {
+        "id": "1",
+        "text": "Budapest"
+      },
+      {
+        "id": "2",
+        "text": "Bangkok"
+      },
+      {
+        "id": "3",
+        "text": "Tbilisi"
+      }
+    ],
+    "text": "Choose the capital of Hungary?"
+  },
+  {
+    "answerId": "2",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Cotton wool"
+      },
+      {
+        "id": "1",
+        "text": "Cosmic dust"
+      },
+      {
+        "id": "2",
+        "text": "The smallest droplets of liquid water and / or water ice crystals"
+      },
+      {
+        "id": "3",
+        "text": "Nothing"
+      }
+    ],
+    "text": "What are clouds made of?"
+  },
+  {
+    "answerId": "3",
+    "answers": [
+      {
+        "id": "0",
+        "text": "Mouse"
+      },
+      {
+        "id": "1",
+        "text": "Cat"
+      },
+      {
+        "id": "2",
+        "text": "Peacock"
+      },
+      {
+        "id": "3",
+        "text": "Cheetah"
+      }
+    ],
+    "text": "What is the fastest animal in the world?"
+  }
+]
