@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/LifeLine: should be able to show life states 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  background: #66bd38;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c1"
+  />
+</div>
+`;
+
+exports[`components/LifeLine: should be able to show life states 2`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  background: #66bd38;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c2 {
+  background: #ff3859;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+</div>
+`;
+
+exports[`components/LifeLine: should be able to show life states 3`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  background: #66bd38;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c1 {
+  background: #ff3859;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+</div>
+`;
+
+exports[`components/LifeLine: should be able to show life states 4`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  background: #ff3859;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c1"
+  />
+</div>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Life: should be able to change theme 1`] = `
+.c0 {
+  background: #66bd38;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`components/Life: should be able to change theme 2`] = `
+.c0 {
+  background: #ff3859;
+  height: 3em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+<div
+  className="c0"
+/>
+`;
