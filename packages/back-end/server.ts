@@ -2,9 +2,10 @@ import Hapi from "@hapi/hapi"
 import dotenv from "dotenv";
 import path from 'path'
 
+import isProduction from "./utils/isProduction"
 import loggerPlugin from "./plugins/logger.plugin"
 import mongoosePlugin from "./plugins/mongoose.plugin"
-import isProduction from "./utils/isProduction"
+import questionsPlugin from "./plugins/questions.plugin"
 
 if (!isProduction) {
     dotenv.config({ path: path.resolve(__dirname, './.env') })
@@ -20,6 +21,11 @@ export const createServer = async (): Promise<Hapi.Server> => {
     await server.register([
         loggerPlugin,
         mongoosePlugin,
+    ])
+
+    // Register routes
+    await server.register([
+        questionsPlugin,
     ])
 
     await server.initialize();
