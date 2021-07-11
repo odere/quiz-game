@@ -1,0 +1,42 @@
+{
+  "name": "quiz-game",
+  "version": "1.0.0",
+  "description": "Simple quiz game",
+  "main": "packages/back-end/index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --stream",
+    "dev": "lerna run dev --stream",
+    "start": "lerna run start --stream",
+    "test": "lerna run test --stream",
+    "update:version": "lerna version --no-push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odere/quiz-game.git"
+  },
+  "keywords": [
+    "React.js",
+    "React",
+    "React-Router",
+    "Node.js",
+    "Node",
+    "RxJs",
+    "Redux",
+    "TypeScript",
+    "StyledComponent",
+    "Quiz"
+  ],
+  "author": "aleksandr.derechei@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/odere/quiz-game/issues"
+  },
+  "homepage": "https://github.com/odere/quiz-game#readme",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
