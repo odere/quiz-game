@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Timer: should be Clickable 1`] = `
+.c1 {
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: ePQddc;
+  animation-name: ePQddc;
+  background: rgba(68,22,139,.50);
+  border-radius: 50%;
+  border: .1em solid #44168b;
+  color: white;
+  display: inline-block;
+  font-size: 2em;
+  height: 75%;
+  left: 50%;
+  line-height: 2.2em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 75%;
+}
+
+.c0 {
+  position: relative;
+  width: 6em;
+  height: 6em;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    15
+  </div>
+</div>
+`;
+
+exports[`components/Timer: should be Clickable 2`] = `
+.c1 {
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: ePQddc;
+  animation-name: ePQddc;
+  background: rgba(68,22,139,.50);
+  border-radius: 50%;
+  border: .1em solid #44168b;
+  color: white;
+  display: inline-block;
+  font-size: 2em;
+  height: 75%;
+  left: 50%;
+  line-height: 2.2em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 75%;
+}
+
+.c0 {
+  position: relative;
+  width: 6em;
+  height: 6em;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    4
+  </div>
+</div>
+`;
+
+exports[`components/Timer: should be Clickable 3`] = `
+.c1 {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: ePQddc;
+  animation-name: ePQddc;
+  background: rgba(255,56,89,.50);
+  border-radius: 50%;
+  border: .1em solid #ff3859;
+  color: white;
+  display: inline-block;
+  font-size: 2em;
+  height: 75%;
+  left: 50%;
+  line-height: 2.2em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 75%;
+}
+
+.c0 {
+  position: relative;
+  width: 6em;
+  height: 6em;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    1
+  </div>
+</div>
+`;
+
+exports[`components/Timer: should be Clickable 4`] = `
+.c1 {
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: ePQddc;
+  animation-name: ePQddc;
+  background: rgba(68,22,139,.50);
+  border-radius: 50%;
+  border: .1em solid #44168b;
+  color: white;
+  display: inline-block;
+  font-size: 2em;
+  height: 75%;
+  left: 50%;
+  line-height: 2.2em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 75%;
+}
+
+.c0 {
+  position: relative;
+  width: 6em;
+  height: 6em;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    0
+  </div>
+</div>
+`;
