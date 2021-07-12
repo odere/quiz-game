@@ -15,4 +15,6 @@ describe('components/Input:', () => {
 		render(<Input label='Placeholder' />)
 		expect(screen.queryByPlaceholderText(/Placeholder/i)).toBeInTheDocument()
 	})
+
+	// TODO: test debouncing onChange callback
 })

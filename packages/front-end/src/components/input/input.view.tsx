@@ -2,7 +2,11 @@ import React, { useEffect, useState, useRef } from 'react'
 import { BehaviorSubject } from 'rxjs'
 import { debounceTime } from 'rxjs/operators'
 
-import { StyledInput, StyledInputContainer, StyledInputClear } from './input.styled'
+import {
+	StyledInput,
+	StyledInputContainer,
+	StyledInputClear,
+} from './input.styled'
 import { InputProps } from './input.types'
 
 const Input: React.FC<InputProps> = props => {
@@ -37,8 +41,16 @@ const Input: React.FC<InputProps> = props => {
 
 	return (
 		<StyledInputContainer>
-			<StyledInput onChange={onChangeHandler} placeholder={label} value={value}/>
-			{value && <StyledInputClear onClick={onClearHandler} data-testid="clear" role="button" >✖️</StyledInputClear>}
+			<StyledInput onChange={onChangeHandler} placeholder={label} value={value} />
+			{value && (
+				<StyledInputClear
+					onClick={onClearHandler}
+					data-testid='clear'
+					role='button'
+				>
+					✖️
+				</StyledInputClear>
+			)}
 		</StyledInputContainer>
 	)
 }

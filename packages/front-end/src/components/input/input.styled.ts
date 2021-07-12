@@ -8,7 +8,7 @@ export const StyledInput = styled.input`
 	border: none;
 	color: ${primaryDark};
 	font-size: 1.75em;
-	padding: .25em .5em;
+	padding: 0.25em 0.5em;
 	min-width: 300px;
 	transition: 200ms;
 	width: 25vw;
@@ -28,9 +28,9 @@ export const StyledInputClear = styled.div`
 	width: 1em;
 	height: 1em;
 	left: calc(100% - 2em);
-	top: calc(50% - .7em);
+	top: calc(50% - 0.7em);
 	content: '✖️';
-	opacity: .25;
+	opacity: 0.25;
 	transition: 200ms;
 
 	&:hover {
