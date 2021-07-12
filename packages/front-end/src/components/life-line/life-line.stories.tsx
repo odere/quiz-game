@@ -6,12 +6,7 @@ import LifeLine from './life-line.view';
 
 const Template: ComponentStory<typeof LifeLine> = (args: any) => <LifeLine {...args} />;
 
-export const Primary = Template.bind({});
-
-Primary.args = {
-    fiftyFifty: true,
-    plusTenSec: true,
-};
+export const Default = Template.bind({});
 
 export const HalfLife = Template.bind({});
 

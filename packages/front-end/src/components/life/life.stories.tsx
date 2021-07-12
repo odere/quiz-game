@@ -6,11 +6,7 @@ import Life from './life.view';
 
 const Template: ComponentStory<typeof Life> = (args: any) => <Life {...args} />;
 
-export const Primary = Template.bind({});
-
-Primary.args = {
-    hasLife: true,
-};
+export const Default = Template.bind({});
 
 export const NoLife = Template.bind({});
 

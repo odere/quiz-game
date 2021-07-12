@@ -9,21 +9,41 @@ const onClick = () => console.log('Click!');
 
 const Template: ComponentStory<typeof Button> = (args: any) => <Button {...args} />;
 
+export const Default = Template.bind({});
+
+Default.args = {
+    label: 'Button',
+};
+
 export const Primary = Template.bind({});
 
 Primary.args = {
     label: 'Button',
     onClick,
     primary: true,
-    size: ButtonSize.small,
 };
 
 export const Secondary = Template.bind({});
 
 Secondary.args = {
-    label: 'OK',
+    label: 'Button',
     onClick,
     primary: false,
+};
+
+export const Small = Template.bind({});
+
+Small.args = {
+    label: 'Button',
+    onClick,
+    size: ButtonSize.small,
+};
+
+export const Large = Template.bind({});
+
+Large.args = {
+    label: 'Button',
+    onClick,
     size: ButtonSize.large,
 };
 
