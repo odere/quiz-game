@@ -31,27 +31,39 @@ const Score: React.FC<ScoreProps> = props => {
 			<GridStyled>
 				<RowStyled>
 					<h4>Correct</h4>
-					<p><MagicNumber value={correctAnswers}/></p>
+					<p>
+						<MagicNumber value={correctAnswers} />
+					</p>
 				</RowStyled>
 				<RowStyled>
 					<h4>Unanswered</h4>
-					<p><MagicNumber value={unansweredAnswers}/></p>
+					<p>
+						<MagicNumber value={unansweredAnswers} />
+					</p>
 				</RowStyled>
 				<RowStyled>
 					<h4>Average Time</h4>
-					<p><MagicNumber value={averageTimePerQuestion}/></p>
+					<p>
+						<MagicNumber value={averageTimePerQuestion} />
+					</p>
 				</RowStyled>
 				<RowStyled>
 					<h4>Quickest Time</h4>
-					<p><MagicNumber value={quickestTimePerQuestion}/></p>
+					<p>
+						<MagicNumber value={quickestTimePerQuestion} />
+					</p>
 				</RowStyled>
 				<RowStyled>
 					<h4>Slowest Time</h4>
-					<p><MagicNumber value={slowestTimePerQuestion}/></p>
+					<p>
+						<MagicNumber value={slowestTimePerQuestion} />
+					</p>
 				</RowStyled>
 				<RowStyled>
 					<h4>Used Life Lines</h4>
-					<p><MagicNumber value={usedLifeLines}/></p>
+					<p>
+						<MagicNumber value={usedLifeLines} />
+					</p>
 				</RowStyled>
 			</GridStyled>
 		</ScoreContainerStyled>
