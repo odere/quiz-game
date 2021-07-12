@@ -1,28 +1,29 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import LifeLine from './life-line.view';
+import LifeLine from './life-line.view'
 
+const Template: ComponentStory<typeof LifeLine> = (args: any) => (
+	<LifeLine {...args} />
+)
 
-const Template: ComponentStory<typeof LifeLine> = (args: any) => <LifeLine {...args} />;
+export const Default = Template.bind({})
 
-export const Default = Template.bind({});
-
-export const HalfLife = Template.bind({});
+export const HalfLife = Template.bind({})
 
 HalfLife.args = {
-    fiftyFifty: false,
-    plusTenSec: true,
-};
+	fiftyFifty: false,
+	plusTenSec: true,
+}
 
-export const NoLife = Template.bind({});
+export const NoLife = Template.bind({})
 
 NoLife.args = {
-    fiftyFifty: false,
-    plusTenSec: false,
-};
+	fiftyFifty: false,
+	plusTenSec: false,
+}
 
 export default {
-    title: 'Components/LifeLine',
-    component: LifeLine,
+	title: 'Components/LifeLine',
+	component: LifeLine,
 } as ComponentMeta<typeof LifeLine>

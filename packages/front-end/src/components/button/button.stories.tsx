@@ -1,59 +1,61 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import Button from './button.view';
+import Button from './button.view'
 import { ButtonSize } from './button.types'
 
+// eslint-disable-next-line no-console
+const onClick = () => console.log('Click!')
 
-const onClick = () => console.log('Click!');
+const Template: ComponentStory<typeof Button> = (args: any) => (
+	<Button {...args} />
+)
 
-const Template: ComponentStory<typeof Button> = (args: any) => <Button {...args} />;
-
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 
 Default.args = {
-    label: 'Button',
-};
+	label: 'Button',
+}
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 
 Primary.args = {
-    label: 'Button',
-    onClick,
-    primary: true,
-};
+	label: 'Button',
+	onClick,
+	primary: true,
+}
 
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 
 Secondary.args = {
-    label: 'Button',
-    onClick,
-    primary: false,
-};
+	label: 'Button',
+	onClick,
+	primary: false,
+}
 
-export const Small = Template.bind({});
+export const Small = Template.bind({})
 
 Small.args = {
-    label: 'Button',
-    onClick,
-    size: ButtonSize.small,
-};
+	label: 'Button',
+	onClick,
+	size: ButtonSize.small,
+}
 
-export const Large = Template.bind({});
+export const Large = Template.bind({})
 
 Large.args = {
-    label: 'Button',
-    onClick,
-    size: ButtonSize.large,
-};
+	label: 'Button',
+	onClick,
+	size: ButtonSize.large,
+}
 
 export default {
-    title: 'Components/Button',
-    component: Button,    
-    argTypes: {
-        size: {
-            options: [ButtonSize.small, ButtonSize.large],
-            control: { type: 'radio' }
-        },
-    },
+	title: 'Components/Button',
+	component: Button,
+	argTypes: {
+		size: {
+			options: [ButtonSize.small, ButtonSize.large],
+			control: { type: 'radio' },
+		},
+	},
 } as ComponentMeta<typeof Button>

@@ -1,3 +1,3 @@
-import Life from './life.view';
+import Life from './life.view'
 
 export default Life

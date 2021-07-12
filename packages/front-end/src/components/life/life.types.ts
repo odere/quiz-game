@@ -1,6 +1,5 @@
 export interface LifeStyledProps {
-    hasLife?: boolean;
+	hasLife?: boolean
 }
 
-export interface LifeProps extends LifeStyledProps {
-}
+export interface LifeProps extends LifeStyledProps {}

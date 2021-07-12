@@ -12,6 +12,7 @@
     "dev": "lerna run dev --stream",
     "start": "lerna run start --stream",
     "test": "lerna run test --stream",
+    "format": "lerna run format",
     "update:version": "lerna version --no-push"
   },
   "repository": {
