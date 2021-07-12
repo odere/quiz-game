@@ -1,7 +1,9 @@
 // @ts-ignore
 describe('components/Input', () => {
 	beforeEach(() => {
-		cy.visit('http://localhost:6006/iframe.html?id=components-input--default&args=&viewMode=story')
+		cy.visit(
+			'http://localhost:6006/iframe.html?id=components-input--default&args=&viewMode=story'
+		)
 	})
 
 	it('should be able to show/hide clear button', () => {
@@ -19,17 +21,15 @@ describe('components/Input', () => {
 	})
 
 	it('should be able to type text', () => {
-		cy
-			.get('input')
-			.type('Hello, World')
-			.should('have.value', 'Hello, World')
+		cy.get('input').type('Hello, World').should('have.value', 'Hello, World')
 	})
 
 	it('should be able to clear text', () => {
 		cy
 			.get('input')
 			.type('Hello, World')
-			.should('have.value', 'Hello, World').get('[data-testid="clear"]')
+			.should('have.value', 'Hello, World')
+			.get('[data-testid="clear"]')
 			.click()
 			.get('input')
 			.should('have.value', '')

@@ -32,6 +32,7 @@ export const StyledInputClear = styled.div`
 	content: '✖️';
 	opacity: 0.25;
 	transition: 200ms;
+	cursor: pointer;
 
 	&:hover {
 		opacity: 1;

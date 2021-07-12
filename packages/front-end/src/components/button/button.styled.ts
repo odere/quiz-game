@@ -15,6 +15,7 @@ export const StyledButton = styled.button`
 	color: inherit;
 	font-size: inherit;
 	padding: 1em;
+	min-width: 5em;
 `
 
 export const StyledButtonContainer = styled.div`

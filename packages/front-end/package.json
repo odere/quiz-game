@@ -1,5 +1,5 @@
 {
-  "name": "front-end",
+  "name": "@quiz-game/front-end",
   "version": "0.1.0",
   "scripts": {
     "build": "react-scripts build",
@@ -13,6 +13,7 @@
     "test": "cross-env SKIP_PREFLIGHT_CHECK=true react-scripts test"
   },
   "dependencies": {
+    "@quiz-game/types": "^1.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
