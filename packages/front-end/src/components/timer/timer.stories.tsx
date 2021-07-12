@@ -3,7 +3,9 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import Timer from './timer.view'
 
-const Template: ComponentStory<typeof Timer> = (args: any) => (<Timer {...args} />)
+const Template: ComponentStory<typeof Timer> = (args: any) => (
+	<Timer {...args} />
+)
 
 export const Default = Template.bind({})
 
@@ -15,14 +17,14 @@ Default.args = {
 export const IsInforming = Template.bind({})
 
 IsInforming.args = {
-	remaining: Math.trunc(15 * .3),
+	remaining: Math.trunc(15 * 0.3),
 	timer: 15,
 }
 
 export const IsWarning = Template.bind({})
 
 IsWarning.args = {
-	remaining: Math.trunc(15 * .1),
+	remaining: Math.trunc(15 * 0.1),
 	timer: 15,
 }
 

@@ -21,30 +21,21 @@ const breatheAnimation = keyframes`
 `
 
 export const StyledTimer = styled.div`
-
-	animation-duration: ${(props: TimerStyledProps) => 
-		(props.isInfo || props.isWarning) && !props.isFinished
-			? '2s'
-			: '0s'
-	};
+	animation-duration: ${(props: TimerStyledProps) =>
+		(props.isInfo || props.isWarning) && !props.isFinished ? '2s' : '0s'};
 	/* animation-duration: 2s; */
 	animation-iteration-count: infinite;
 	animation-name: ${breatheAnimation};
-	background: ${(props: TimerStyledProps) => 
+	background: ${(props: TimerStyledProps) =>
 		props.isInfo
 			? yellow50
 			: props.isWarning || props.isFinished
-				? red50
-				: primary50
-	};
+			? red50
+			: primary50};
 	border-radius: 50%;
-	border: .1em solid ${(props: TimerStyledProps) => 
-		props.isInfo
-			? yellow
-			: props.isWarning || props.isFinished
-				? red
-				: primary
-	};;
+	border: 0.1em solid
+		${(props: TimerStyledProps) =>
+			props.isInfo ? yellow : props.isWarning || props.isFinished ? red : primary};
 	color: white;
 	display: inline-block;
 	font-size: 2em;

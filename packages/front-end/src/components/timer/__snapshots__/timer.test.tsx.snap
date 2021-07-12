@@ -10,7 +10,7 @@ exports[`components/Timer: should be Clickable 1`] = `
   animation-name: ePQddc;
   background: rgba(68,22,139,.50);
   border-radius: 50%;
-  border: .1em solid #44168b;
+  border: 0.1em solid #44168b;
   color: white;
   display: inline-block;
   font-size: 2em;
@@ -55,7 +55,7 @@ exports[`components/Timer: should be Clickable 2`] = `
   animation-name: ePQddc;
   background: rgba(68,22,139,.50);
   border-radius: 50%;
-  border: .1em solid #44168b;
+  border: 0.1em solid #44168b;
   color: white;
   display: inline-block;
   font-size: 2em;
@@ -100,7 +100,7 @@ exports[`components/Timer: should be Clickable 3`] = `
   animation-name: ePQddc;
   background: rgba(255,56,89,.50);
   border-radius: 50%;
-  border: .1em solid #ff3859;
+  border: 0.1em solid #ff3859;
   color: white;
   display: inline-block;
   font-size: 2em;
@@ -145,7 +145,7 @@ exports[`components/Timer: should be Clickable 4`] = `
   animation-name: ePQddc;
   background: rgba(68,22,139,.50);
   border-radius: 50%;
-  border: .1em solid #44168b;
+  border: 0.1em solid #44168b;
   color: white;
   display: inline-block;
   font-size: 2em;
