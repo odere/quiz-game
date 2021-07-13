@@ -6,7 +6,7 @@ import { green, red } from '../../constants/colors'
 
 export const StyledLife = styled.div`
 	background: ${(props: LifeStyledProps) => (props.hasLife ? green : red)};
-	height: 3em;
+	min-height: 1.5em;
 	transition: 200ms;
 	width: 50%;
 `

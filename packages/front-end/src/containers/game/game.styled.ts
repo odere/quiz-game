@@ -1,0 +1,57 @@
+import styled from 'styled-components'
+
+import { primary } from '../../constants/colors'
+import { StyledHiddenContainer } from './game.types'
+
+export const GameStyledContainer = styled.div`
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    background: ${primary};
+`
+
+export const LobbyStyledContainer = styled.div`
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2em;
+    background: ${primary};
+	z-index: 10;
+    position: absolute;
+    transform: ${(props: StyledHiddenContainer) => props.isHidden ? 'translateY(-100vh)' : 'translateY(0)'};
+    transition: 500ms;
+`
+
+export const ScoreStyledContainer = styled.div`
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2em;
+    background: ${primary};
+	z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    transform: ${(props: StyledHiddenContainer) => props.isHidden ? 'translateY(+100vh)' : 'translateY(0)'};
+    transition: 500ms;
+`
+
+export const QuestionStyledContainer = styled.div`
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+	justify-content: space-between;
+	overflow: hidden;
+    background: ${primary};
+	z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    transform: ${(props: StyledHiddenContainer) => props.isHidden ? 'translateX(-100vw)' : 'translateX(0)'};
+    transition: 500ms;
+`

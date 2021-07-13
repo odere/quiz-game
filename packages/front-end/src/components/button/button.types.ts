@@ -6,6 +6,7 @@ export enum ButtonSize {
 export interface ButtonStyledProps {
 	size?: ButtonSize
 	primary?: boolean
+	isDisable?: boolean
 }
 
 export interface ButtonProps extends ButtonStyledProps {

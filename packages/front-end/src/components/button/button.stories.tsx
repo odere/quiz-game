@@ -19,6 +19,7 @@ export const Primary = Template.bind({})
 Primary.args = {
 	label: 'Button',
 	primary: true,
+	isDisable: false,
 }
 
 export const Secondary = Template.bind({})
@@ -26,6 +27,7 @@ export const Secondary = Template.bind({})
 Secondary.args = {
 	label: 'Button',
 	primary: false,
+	isDisable: false,
 }
 
 export const Small = Template.bind({})
@@ -33,6 +35,7 @@ export const Small = Template.bind({})
 Small.args = {
 	label: 'Button',
 	size: ButtonSize.small,
+	isDisable: false,
 }
 
 export const Large = Template.bind({})
@@ -40,6 +43,15 @@ export const Large = Template.bind({})
 Large.args = {
 	label: 'Button',
 	size: ButtonSize.large,
+	isDisable: false,
+}
+
+export const Disable = Template.bind({})
+
+Disable.args = {
+	label: 'Button',
+	size: ButtonSize.small,
+	isDisable: true,
 }
 
 export default {

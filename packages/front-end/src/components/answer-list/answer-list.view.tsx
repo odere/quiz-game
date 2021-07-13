@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Answer from '../answer'
-import { Answer as AnswerType } from '@quiz-game/types'
+import { Answer as AnswerType } from '../../types'
 import { AnswerListProps, ExtendedAnswer } from './answer-list.types'
 import { AnswerListStyled } from './answer-list.styled'
 import { green, red, blue, yellow } from '../../constants/colors'

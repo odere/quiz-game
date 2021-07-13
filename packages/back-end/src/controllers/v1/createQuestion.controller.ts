@@ -2,7 +2,7 @@ import Boom from '@hapi/boom';
 import Hapi from '@hapi/hapi';
 import { model } from 'mongoose';
 
-import { QuestionPayload } from '@quiz-game/types';
+import { QuestionPayload } from '../../types';
 
 const createQuestionController = async (
 	request: Hapi.Request,

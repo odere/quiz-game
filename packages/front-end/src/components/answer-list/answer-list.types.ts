@@ -1,5 +1,5 @@
-import { Answer } from '@quiz-game/types'
 import { AnswerProps } from '../answer/answer.types'
+import { Answer } from '../../types'
 
 export interface ExtendedAnswer extends Answer, AnswerProps {}
 

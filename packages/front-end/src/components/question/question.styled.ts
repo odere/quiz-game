@@ -3,19 +3,21 @@ import styled from 'styled-components'
 export const StyledQuestion = styled.div`
 	min-height: 400px;
 	display: flex;
+	flex-grow: 1;
 	flex-direction: column;
 	justify-content: space-between;
 `
 export const StyledQuestionContent = styled.div`
 	display: flex;
 	min-height: 200px;
+    flex-grow: 2;
 	justify-content: space-between;
 `
 
 export const StyledTimeWrapper = styled.div`
 	position: fixed;
-	top: 2em;
-	left: 2em;
+	top: 10%;
+	left: 5%;
 `
 
 export const StyledTaskWrapper = styled.div`

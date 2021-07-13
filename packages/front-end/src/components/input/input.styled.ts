@@ -8,7 +8,7 @@ export const StyledInput = styled.input`
 	border: none;
 	color: ${primaryDark};
 	font-size: 1.75em;
-	padding: 0.25em 0.5em;
+	padding: 0.3em 0.5em;
 	min-width: 300px;
 	transition: 200ms;
 	width: 25vw;

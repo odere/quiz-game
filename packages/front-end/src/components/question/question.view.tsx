@@ -14,11 +14,33 @@ import Timer from '../timer'
 import shuffleArray from '../../utils/shuffle-array'
 
 const COUNTDOWN_TIME = 15
+const stub = {
+    "answerId": "0",
+    "answers": [
+      {
+        "id": "0",
+        "text": "5"
+      },
+      {
+        "id": "1",
+        "text": "4"
+      },
+      {
+        "id": "2",
+        "text": "6"
+      },
+      {
+        "id": "3",
+        "text": "5.25"
+      }
+    ],
+    "text": "1.25 + 3.75 = ?"
+  }
 
 // TODO: encrypt sensitive data
 const Question: React.FC<QuestionProps> = props => {
-	const { question } = props
-	const { answerId, answers, image, text } = question
+	const { question = stub, onFinishQuestion } = props
+	const { answerId, answers, text } = question
 
 	const [remaining, setRemaining] = useState(COUNTDOWN_TIME)
 	const { current: subject } = useRef(new BehaviorSubject(COUNTDOWN_TIME))
@@ -26,6 +48,13 @@ const Question: React.FC<QuestionProps> = props => {
 
 	const finishQuestion = (isValidAnswer: boolean) => {
 		answered = isValidAnswer
+		onFinishQuestion({
+			averageTimePerQuestion: remaining,
+			correctAnswers: answered === true ? 1 : 0,
+			quickestTimePerQuestion: remaining,
+			slowestTimePerQuestion: remaining,
+			unansweredAnswers: answered === false ? 1 : 0,
+		});
 	}
 
 	const onChangeHandler = (id: string) => {
@@ -65,7 +94,7 @@ const Question: React.FC<QuestionProps> = props => {
 				</StyledTimeWrapper>
 				<StyledTaskWrapper>
 					<p>{text}</p>
-					{image && <img src={image} alt={text} />}
+					<img src={''} alt={text} />
 				</StyledTaskWrapper>
 			</StyledQuestionContent>
 

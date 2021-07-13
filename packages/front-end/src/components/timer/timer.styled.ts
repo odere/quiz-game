@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import { TimerStyledProps } from './timer.types'
 import {
 	primary,
-	primary50,
+	blue,
 	red,
 	red50,
 	yellow,
@@ -31,7 +31,7 @@ export const StyledTimer = styled.div`
 			? yellow50
 			: props.isWarning || props.isFinished
 			? red50
-			: primary50};
+			: blue};
 	border-radius: 50%;
 	border: 0.1em solid
 		${(props: TimerStyledProps) =>

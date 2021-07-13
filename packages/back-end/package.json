@@ -46,7 +46,6 @@
   "dependencies": {
     "@hapi/boom": "^9.1.3",
     "@hapi/hapi": "^20.1.5",
-    "@quiz-game/types": "^1.0.0",
     "@types/node": "^15.0.1",
     "dotenv": "^10.0.0",
     "hapi": "^18.1.0",

@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import ErrorBoundary from './components/error-boundary'
 import reportWebVitals from './reportWebVitals'
+
+import { GlobalStyle } from './index.styled'
+import Game from './containers/game'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<ErrorBoundary>
+			<GlobalStyle />
+			<Game />
+		</ErrorBoundary>
 	</React.StrictMode>,
 	document.getElementById('root')
 )

@@ -1,4 +1,4 @@
-import { Question } from '@quiz-game/types'
+import { Question } from '../../../types'
 
 const QUESTION_MOCK: Question = {
 	id: 'QUESTION_MOCK',

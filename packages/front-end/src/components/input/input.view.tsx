@@ -16,16 +16,13 @@ const Input: React.FC<InputProps> = props => {
 	const [value, setValue] = useState('')
 
 	useEffect(() => {
-		const observable = subjectRef.current
-			.pipe(debounceTime(200))
-			.subscribe((inputValue: string) => {
-				if (onChange) {
-					onChange(inputValue)
-				}
-			})
+		subjectRef.current.pipe(debounceTime(200)).subscribe((inputValue: string) => {
+			if (onChange) {
+				onChange(inputValue)
+			}
+		})
 
 		return () => {
-			observable.unsubscribe()
 			subjectRef.current.unsubscribe()
 		}
 	}, [])
@@ -37,6 +34,10 @@ const Input: React.FC<InputProps> = props => {
 
 	const onClearHandler = () => {
 		setValue('')
+
+		if (onChange) {
+			onChange('')
+		}
 	}
 
 	return (
