@@ -9,8 +9,9 @@ export const GameStyledContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-    background: ${primary};
+	background: ${primary};
 `
+GameStyledContainer.displayName = 'GameStyledContainer'
 
 export const LobbyStyledContainer = styled.div`
 	flex-grow: 1;
@@ -18,12 +19,14 @@ export const LobbyStyledContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	gap: 2em;
-    background: ${primary};
+	background: ${primary};
 	z-index: 10;
-    position: absolute;
-    transform: ${(props: StyledHiddenContainer) => props.isHidden ? 'translateY(-100vh)' : 'translateY(0)'};
-    transition: 500ms;
+	position: absolute;
+	transform: ${(props: StyledHiddenContainer) =>
+		props.isHidden ? 'translateY(-100vh)' : 'translateY(0)'};
+	transition: 500ms;
 `
+LobbyStyledContainer.displayName = 'LobbyStyledContainer'
 
 export const ScoreStyledContainer = styled.div`
 	flex-grow: 1;
@@ -31,14 +34,16 @@ export const ScoreStyledContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	gap: 2em;
-    background: ${primary};
+	background: ${primary};
 	z-index: 10;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    transform: ${(props: StyledHiddenContainer) => props.isHidden ? 'translateY(+100vh)' : 'translateY(0)'};
-    transition: 500ms;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	transform: ${(props: StyledHiddenContainer) =>
+		props.isHidden ? 'translateY(+100vh)' : 'translateY(0)'};
+	transition: 500ms;
 `
+ScoreStyledContainer.displayName = 'ScoreStyledContainer'
 
 export const QuestionStyledContainer = styled.div`
 	flex-grow: 1;
@@ -47,11 +52,13 @@ export const QuestionStyledContainer = styled.div`
 	align-self: stretch;
 	justify-content: space-between;
 	overflow: hidden;
-    background: ${primary};
+	background: ${primary};
 	z-index: 10;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    transform: ${(props: StyledHiddenContainer) => props.isHidden ? 'translateX(-100vw)' : 'translateX(0)'};
-    transition: 500ms;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	transform: ${(props: StyledHiddenContainer) =>
+		props.isHidden ? 'translateX(-100vw)' : 'translateX(0)'};
+	transition: 500ms;
 `
+QuestionStyledContainer.displayName = 'QuestionStyledContainer'

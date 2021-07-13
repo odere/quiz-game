@@ -27,11 +27,7 @@ export const StyledTimer = styled.div`
 	animation-iteration-count: infinite;
 	animation-name: ${breatheAnimation};
 	background: ${(props: TimerStyledProps) =>
-		props.isInfo
-			? yellow50
-			: props.isWarning || props.isFinished
-			? red50
-			: blue};
+		props.isInfo ? yellow50 : props.isWarning || props.isFinished ? red50 : blue};
 	border-radius: 50%;
 	border: 0.1em solid
 		${(props: TimerStyledProps) =>

@@ -15,27 +15,27 @@ import shuffleArray from '../../utils/shuffle-array'
 
 const COUNTDOWN_TIME = 15
 const stub = {
-    "answerId": "0",
-    "answers": [
-      {
-        "id": "0",
-        "text": "5"
-      },
-      {
-        "id": "1",
-        "text": "4"
-      },
-      {
-        "id": "2",
-        "text": "6"
-      },
-      {
-        "id": "3",
-        "text": "5.25"
-      }
-    ],
-    "text": "1.25 + 3.75 = ?"
-  }
+	answerId: '0',
+	answers: [
+		{
+			id: '0',
+			text: '5',
+		},
+		{
+			id: '1',
+			text: '4',
+		},
+		{
+			id: '2',
+			text: '6',
+		},
+		{
+			id: '3',
+			text: '5.25',
+		},
+	],
+	text: '1.25 + 3.75 = ?',
+}
 
 // TODO: encrypt sensitive data
 const Question: React.FC<QuestionProps> = props => {
@@ -54,7 +54,7 @@ const Question: React.FC<QuestionProps> = props => {
 			quickestTimePerQuestion: remaining,
 			slowestTimePerQuestion: remaining,
 			unansweredAnswers: answered === false ? 1 : 0,
-		});
+		})
 	}
 
 	const onChangeHandler = (id: string) => {

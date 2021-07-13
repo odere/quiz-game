@@ -7,4 +7,4 @@ export const DEFAULT_STATISTIC = {
 	usedLifeLines: 0,
 }
 
-export const MAX_QUESTIONS = 10;
+export const MAX_QUESTIONS = 10

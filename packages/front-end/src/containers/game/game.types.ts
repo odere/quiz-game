@@ -1,7 +1,7 @@
 import { Game } from '../../types'
 
 export interface StyledHiddenContainer {
-    isHidden?: boolean
+	isHidden?: boolean
 }
 
 interface GameProps extends Game {}

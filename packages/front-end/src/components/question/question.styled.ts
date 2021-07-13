@@ -10,7 +10,7 @@ export const StyledQuestion = styled.div`
 export const StyledQuestionContent = styled.div`
 	display: flex;
 	min-height: 200px;
-    flex-grow: 2;
+	flex-grow: 2;
 	justify-content: space-between;
 `
 

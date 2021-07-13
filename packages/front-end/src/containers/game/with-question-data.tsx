@@ -19,10 +19,12 @@ function withQuestionsData(WrappedComponent: any, url: string) {
 		render() {
 			return (
 				<React.Suspense fallback={<h1>Loading questions...</h1>}>
-					{this.state.questionsPool && <WrappedComponent
-						questionsPool={this.state.questionsPool}
-						{...this.props}
-					/>}
+					{this.state.questionsPool && (
+						<WrappedComponent
+							questionsPool={this.state.questionsPool}
+							{...this.props}
+						/>
+					)}
 				</React.Suspense>
 			)
 		}
