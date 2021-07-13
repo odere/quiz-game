@@ -11,22 +11,30 @@ const Timer: React.FC<TimerProps> = props => {
 	const [isFinished, setIsFinished] = useState(false)
 
 	useEffect(() => {
-		if (remaining <= timer * 0.3) {
-			setIsInfo(true)
-			setIsWarning(false)
-			setIsFinished(false)
-		}
-
-		if (remaining <= timer * 0.1) {
-			setIsInfo(false)
-			setIsWarning(true)
-			setIsFinished(false)
-		}
-
-		if (remaining === 0) {
-			setIsInfo(false)
-			setIsWarning(false)
-			setIsFinished(true)
+		switch (true) {
+			case remaining <= timer * 0.2: {
+				setIsInfo(false)
+				setIsWarning(true)
+				setIsFinished(false)
+				break
+			}
+			case remaining <= timer * 0.5: {
+				setIsInfo(true)
+				setIsWarning(false)
+				setIsFinished(false)
+				break
+			}
+			case remaining === 0: {
+				setIsInfo(false)
+				setIsWarning(false)
+				setIsFinished(true)
+				break
+			}
+			default: {
+				setIsInfo(false)
+				setIsWarning(false)
+				setIsFinished(false)
+			}
 		}
 	}, [remaining])
 

@@ -9,4 +9,5 @@ export interface AnswerListStyedProps {
 
 export interface AnswerListProps {
 	answers: Answer[]
+	onChange?(id: string): void
 }

@@ -1,16 +1,15 @@
-const shuffleArray: <T>(array: T[]) => T[] = array => {
-	const shuffled = []
-	let modify = array.length
-	let i
+const shuffleArray: <T>(sample: T[], acc?: T[]) => T[] = (sample, acc = []) => {
+	const sampleCopy = [...sample]
+	const length = sampleCopy.length
+	const randomIndex = Math.floor(Math.random() * length)
+	acc.push(sampleCopy[randomIndex])
+	sampleCopy.splice(randomIndex, 1)
 
-	while (modify) {
-		i = Math.floor(Math.random() * (modify + 1))
-		modify--
-		shuffled.push(array[i])
-		array.splice(i, 1)
+	if (length === 1) {
+		return acc
 	}
 
-	return shuffled
+	return shuffleArray(sampleCopy, acc)
 }
 
 export default shuffleArray
