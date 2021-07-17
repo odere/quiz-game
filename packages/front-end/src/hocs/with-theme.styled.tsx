@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { primary } from './constants/colors'
+import { primary } from '../constants/colors'
 
 export const GlobalStyle = createGlobalStyle`
     body {
@@ -17,3 +17,4 @@ export const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
     }
 `
+GlobalStyle.displayName = 'GlobalStyle'

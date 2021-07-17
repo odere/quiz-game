@@ -1,5 +1,7 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ActiveQuestion, GameStatus, Statistic } from '../../types'
+
+import { useGameActions } from '../../store/slices/game.slice'
 
 import Button from '../../components/button'
 import GameProps from './game.types'
@@ -17,7 +19,7 @@ import {
 } from './game.styled'
 
 const Game: React.FC<GameProps> = props => {
-	const { questionsPool } = props
+	const { questionsPool = [] } = props
 
 	const [questionNumber, setQuestionNumber] = useState(0)
 	const [questions, setQuestions] = useState<ActiveQuestion[]>([])
@@ -53,7 +55,7 @@ const Game: React.FC<GameProps> = props => {
 	const onFinishQuestionHandler = () => {
 		if (questionNumber <= MAX_QUESTIONS) {
 			setGameStatus(GameStatus.finished)
-			setStatistic(calculateStatistic());
+			setStatistic(calculateStatistic())
 		}
 
 		setQuestionNumber(questionNumber + 1)
@@ -83,7 +85,10 @@ const Game: React.FC<GameProps> = props => {
 
 			<QuestionStyledContainer isHidden={gameStatus !== GameStatus.inProgress}>
 				<LifeLine fiftyFifty={fiftyFifty} plusTenSec={plusTenSec} />
-				<Question question={questions[questionNumber]} onFinishQuestion={onFinishQuestionHandler} />
+				<Question
+					question={questions[questionNumber]}
+					onFinishQuestion={onFinishQuestionHandler}
+				/>
 			</QuestionStyledContainer>
 
 			<ScoreStyledContainer isHidden={gameStatus !== GameStatus.finished}>
