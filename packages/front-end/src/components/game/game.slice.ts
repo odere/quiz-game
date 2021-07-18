@@ -1,13 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux'
 import {
 	PayloadAction,
-	// createAsyncThunk,
+	createAsyncThunk,
 	createEntityAdapter,
 	createSlice,
 } from '@reduxjs/toolkit'
-
-// FIXME: replace by fetching data
-import { questions } from './quiz-questions-example'
 
 import { Question } from '../../types/question.types'
 import { Game, GameStatus } from '../../types/game.types'
@@ -21,6 +18,7 @@ import {
 import getStatistic from './helpers/get-statistic.helper'
 import getNextQuestion from './helpers/get-next-question.helper'
 import getAnsweredQuestion from './helpers/get-answered-question-helper'
+import getAllQuestions from '../../services/questions.service'
 
 const questionsAdapter = createEntityAdapter<Question>({
 	selectId: (answer: Question) => answer.id,
@@ -44,6 +42,11 @@ export const initialGameState: GameState = {
 	remainingTime: REMAINING_TIME,
 	statistic: EMPTY_STATISTIC,
 }
+
+const onFetchQuestions = createAsyncThunk(
+	'game/onFetchQuestions',
+	async () => getAllQuestions()
+)
 
 // TODO: Add test for reducer
 export const gameSlice = createSlice({
@@ -75,19 +78,19 @@ export const gameSlice = createSlice({
 				playerName: state.playerName,
 			}
 		},
-		onFetchQuestion(state: GameState) {
-			// TODO: redux-thunk
-			// TODO: encrypt data
-			// FIXME: replace by fetching data
-			const questionsPoolItems: Question[] = shuffleArray(questions)
+		// onFetchQuestion(state: GameState) {
+		// 	// TODO: redux-thunk
+		// 	// TODO: encrypt data
+		// 	// FIXME: replace by fetching data
+		// 	const questionsPoolItems: Question[] = shuffleArray(questions)
 
-			if (questionsPoolItems.length > 0) {
-				state.questionsPool = questionsAdapter.setAll(
-					state.questionsPool,
-					questionsPoolItems
-				)
-			}
-		},
+		// 	if (questionsPoolItems.length > 0) {
+		// 		state.questionsPool = questionsAdapter.setAll(
+		// 			state.questionsPool,
+		// 			questionsPoolItems
+		// 		)
+		// 	}
+		// },
 		onNextQuestion(
 			state: GameState,
 			action: PayloadAction<{ selectedId: string }>
@@ -137,12 +140,27 @@ export const gameSlice = createSlice({
 			}
 		},
 	},
+	extraReducers: (builder) => {
+		// Add reducers for additional action types here, and handle loading state as needed
+		builder.addCase(onFetchQuestions.fulfilled, (state: GameState, action: PayloadAction<Question[]>) => {
+			// // Add user to the state array
+			// state.entities.push(action.payload)
+			// const {} = action.payload
+			const questionsPoolItems: Question[] = shuffleArray(action.payload)
+
+			if (questionsPoolItems.length > 0) {
+				state.questionsPool = questionsAdapter.setAll(
+					state.questionsPool,
+					questionsPoolItems
+				)
+			}
+		})
+	},
 })
 
 const {
 	onEndGame,
 	onFiftyFifty,
-	onFetchQuestion,
 	onNextQuestion,
 	onPlusTenSeconds,
 	onResetGame,
@@ -157,7 +175,7 @@ export const useDispatchedActions = () => {
 	return {
 		onEndGame: () => dispatch(onEndGame()),
 		onFiftyFifty: () => dispatch(onFiftyFifty()),
-		onFetchQuestion: () => dispatch(onFetchQuestion()),
+		onFetchQuestions: () => dispatch(onFetchQuestions()),
 		onNextQuestion: (selectedId: string) =>
 			dispatch(onNextQuestion({ selectedId })),
 		onPlusTenSeconds: () => dispatch(onPlusTenSeconds()),

@@ -31,7 +31,7 @@ const Game: React.FC<GameProps> = () => {
 	const {
 		onEndGame,
 		onFiftyFifty,
-		onFetchQuestion,
+		onFetchQuestions,
 		onNextQuestion,
 		onPlusTenSeconds,
 		onResetGame,
@@ -52,7 +52,7 @@ const Game: React.FC<GameProps> = () => {
 
 	const onInitGameHandler = () => {
 		onResetGame()
-		onFetchQuestion()
+		onFetchQuestions()
 	}
 
 	const onNextQuestionHandler = (selectedId: string = '') => {

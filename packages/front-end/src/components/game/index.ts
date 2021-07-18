@@ -1,11 +1,3 @@
 import Game from './game.view'
-import withQuestionsData from './with-question-data'
-import QUESTIONS_API from '../../constants/api.constants'
-
-const url = `${
-	process.env.NODE_ENV === 'development' && 'http://localhost:3000'
-}${QUESTIONS_API.getAll}`
-
-export const GameWithData = withQuestionsData(Game, url)
 
 export default Game
