@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
@@ -14,6 +15,8 @@ export const HalfLife = Template.bind({})
 HalfLife.args = {
 	fiftyFifty: false,
 	plusTenSec: true,
+	onFiftyFifty() { console.log('onFiftyFifty') },
+	onPlusTenSeconds() { console.log('onFiftyFifty') },
 }
 
 export const NoLife = Template.bind({})
@@ -21,6 +24,8 @@ export const NoLife = Template.bind({})
 NoLife.args = {
 	fiftyFifty: false,
 	plusTenSec: false,
+	onFiftyFifty() { console.log('onFiftyFifty') },
+	onPlusTenSeconds() { console.log('onFiftyFifty') },
 }
 
 export default {

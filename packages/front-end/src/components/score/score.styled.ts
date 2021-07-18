@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { primary50 } from '../../constants/colors'
+import { primary50 } from '../../constants/colors.constants'
 
 export const CloseScoreStyled = styled.div`
 	position: absolute;

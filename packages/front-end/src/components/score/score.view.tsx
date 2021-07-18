@@ -19,7 +19,6 @@ const Score: React.FC<ScoreProps> = props => {
 		slowestTimePerQuestion,
 		title,
 		unansweredAnswers,
-		usedLifeLines,
 	} = props
 
 	return (
@@ -57,12 +56,6 @@ const Score: React.FC<ScoreProps> = props => {
 					<h4>Slowest Time</h4>
 					<p>
 						<MagicNumber value={slowestTimePerQuestion} />
-					</p>
-				</RowStyled>
-				<RowStyled>
-					<h4>Used Life Lines</h4>
-					<p>
-						<MagicNumber value={usedLifeLines} />
 					</p>
 				</RowStyled>
 			</GridStyled>

@@ -17,7 +17,7 @@ const Input: React.FC<InputProps> = props => {
 
 	useEffect(() => {
 		subjectRef.current.pipe(debounceTime(200)).subscribe((inputValue: string) => {
-			if (onChange) {
+			if (onChange && inputValue !== value) {
 				onChange(inputValue)
 			}
 		})

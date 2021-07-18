@@ -3,11 +3,11 @@ import logger from 'redux-logger'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 
-import gameReducer, { SLICE_NAME } from './slices/game.slice'
+import gameReducer from '../components/game/game.slice'
 
 const store = configureStore({
 	reducer: {
-		[SLICE_NAME]: gameReducer,
+		game: gameReducer,
 	},
 	middleware: getDefaultMiddleware => {
 		const defaultMiddleware = getDefaultMiddleware().concat([])

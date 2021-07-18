@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import { primary } from '../../constants/colors'
-import { StyledHiddenContainer } from './game.types'
+import { primary } from '../../constants/colors.constants'
+import { StyledHiddenContainer } from '../../types/game.types'
 
 export const GameStyledContainer = styled.div`
 	flex-grow: 1;

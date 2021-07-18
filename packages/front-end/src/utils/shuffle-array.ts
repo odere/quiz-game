@@ -3,17 +3,18 @@ const shuffleArray: <T>(sample: T[], acc?: T[]) => T[] = (
 	acc = []
 ) => {
 	const sampleCopy = [...sample]
-	// const length = sampleCopy.length
-	// const randomIndex = Math.floor(Math.random() * length)
-	// acc.push(sampleCopy[randomIndex])
-	// sampleCopy.splice(randomIndex, 1)
+	const length = sampleCopy.length
+	const randomIndex = Math.floor(Math.random() * length)
 
-	// if (length === 1) {
-	// 	return acc
-	// }
+	acc.push(sampleCopy[randomIndex])
+	sampleCopy.splice(randomIndex, 1)
 
-	// return shuffleArray(sampleCopy, acc)
-	return sampleCopy
+	if (length === 1) {
+		return acc
+	}
+
+	return shuffleArray(sampleCopy, acc)
+	// return sampleCopy
 }
 
 export default shuffleArray

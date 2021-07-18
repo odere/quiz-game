@@ -1,13 +1,13 @@
+import { Answer } from '../../types/answer.types'
 import { AnswerProps } from '../answer/answer.types'
-import { Answer } from '../../types'
 
-export interface ExtendedAnswer extends Answer, AnswerProps {}
+export interface AnswerComponentsProps extends AnswerProps {}
 
 export interface AnswerListStyedProps {
-	isDisabled: boolean
+	isDisabled?: boolean
 }
 
-export interface AnswerListProps {
+export interface AnswerListProps extends AnswerListStyedProps {
 	answers: Answer[]
 	onChange?(id: string): void
 }

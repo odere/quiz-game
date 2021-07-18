@@ -4,8 +4,9 @@ import { AnswerListStyedProps } from './answer-list.types'
 
 export const AnswerListStyled = styled.div`
 	display: flex;
-	flex-wrap: wrap;
 	flex-grow: 1;
+	flex-wrap: wrap;
+	min-height: 400px;
 	pointer-events: ${(props: AnswerListStyedProps) =>
 		props.isDisabled ? 'none' : 'inherit'};
 

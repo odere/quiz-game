@@ -1,10 +1,11 @@
+import { Answer } from '../../types/answer.types'
+
 export interface AnswerStyledProps {
 	color: string
-	isDisabled?: boolean
+	isDisabled: boolean
 	isSelected?: boolean
 }
 
-export interface AnswerProps extends AnswerStyledProps {
+export interface AnswerProps extends Answer, AnswerStyledProps {
 	onChange(): void
-	text: string
 }

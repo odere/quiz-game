@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-shadow
 export enum ButtonSize {
 	small = 'small',
 	large = 'large',

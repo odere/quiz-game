@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { primaryDark, white50 } from '../../constants/colors'
+import { primaryDark, white50 } from '../../constants/colors.constants'
 
 export const StyledInput = styled.input`
 	background: ${white50};

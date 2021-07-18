@@ -1,19 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/LifeLine: should be able to show life states 1`] = `
+.c1 {
+  background: #66bd38;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c1:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c1 {
-  background: #66bd38;
-  height: 3em;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  width: 50%;
+  min-height: 1.5em;
+  gap: 0.25em;
 }
 
 <div
@@ -21,35 +32,67 @@ exports[`components/LifeLine: should be able to show life states 1`] = `
 >
   <div
     className="c1"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      50/50
+    </div>
+  </div>
   <div
     className="c1"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      +10s
+    </div>
+  </div>
 </div>
 `;
 
 exports[`components/LifeLine: should be able to show life states 2`] = `
+.c1 {
+  background: #66bd38;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c1:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
+}
+
+.c2 {
+  background: #ff3859;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c2:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c1 {
-  background: #66bd38;
-  height: 3em;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  width: 50%;
-}
-
-.c2 {
-  background: #ff3859;
-  height: 3em;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  width: 50%;
+  min-height: 1.5em;
+  gap: 0.25em;
 }
 
 <div
@@ -57,35 +100,67 @@ exports[`components/LifeLine: should be able to show life states 2`] = `
 >
   <div
     className="c1"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      50/50
+    </div>
+  </div>
   <div
     className="c2"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      +10s
+    </div>
+  </div>
 </div>
 `;
 
 exports[`components/LifeLine: should be able to show life states 3`] = `
+.c2 {
+  background: #66bd38;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c2:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
+}
+
+.c1 {
+  background: #ff3859;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c1:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c2 {
-  background: #66bd38;
-  height: 3em;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  width: 50%;
-}
-
-.c1 {
-  background: #ff3859;
-  height: 3em;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  width: 50%;
+  min-height: 1.5em;
+  gap: 0.25em;
 }
 
 <div
@@ -93,27 +168,50 @@ exports[`components/LifeLine: should be able to show life states 3`] = `
 >
   <div
     className="c1"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      50/50
+    </div>
+  </div>
   <div
     className="c2"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      +10s
+    </div>
+  </div>
 </div>
 `;
 
 exports[`components/LifeLine: should be able to show life states 4`] = `
+.c1 {
+  background: #ff3859;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 50%;
+}
+
+.c1:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c1 {
-  background: #ff3859;
-  height: 3em;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  width: 50%;
+  min-height: 1.5em;
+  gap: 0.25em;
 }
 
 <div
@@ -121,9 +219,21 @@ exports[`components/LifeLine: should be able to show life states 4`] = `
 >
   <div
     className="c1"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      50/50
+    </div>
+  </div>
   <div
     className="c1"
-  />
+  >
+    <div
+      onClick={[Function]}
+    >
+      +10s
+    </div>
+  </div>
 </div>
 `;

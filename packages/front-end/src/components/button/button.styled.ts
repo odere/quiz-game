@@ -7,7 +7,7 @@ import {
 	primaryDark,
 	secondary,
 	secondaryDark,
-} from '../../constants/colors'
+} from '../../constants/colors.constants'
 
 export const StyledButton = styled.button`
 	background: transparent;

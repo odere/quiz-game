@@ -1,6 +1,8 @@
-import { Question, Statistic } from '../../types'
+import { Question } from '../../types/question.types'
 
 export interface QuestionProps {
+	remainingTime: number
+	onFinish(selectedId: string): void
+	onTick(): void
 	question: Question
-	onFinishQuestion(statistic: Partial<Statistic>): void
 }

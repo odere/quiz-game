@@ -12,13 +12,13 @@ const Timer: React.FC<TimerProps> = props => {
 
 	useEffect(() => {
 		switch (true) {
-			case remaining <= timer * 0.2: {
+			case remaining <= timer * 0.3: {
 				setIsInfo(false)
 				setIsWarning(true)
 				setIsFinished(false)
 				break
 			}
-			case remaining <= timer * 0.5: {
+			case remaining <= timer * 0.75: {
 				setIsInfo(true)
 				setIsWarning(false)
 				setIsFinished(false)

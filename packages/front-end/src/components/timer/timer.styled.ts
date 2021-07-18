@@ -8,7 +8,7 @@ import {
 	red50,
 	yellow,
 	yellow50,
-} from '../../constants/colors'
+} from '../../constants/colors.constants'
 
 const breatheAnimation = keyframes`
 	0% { transform: translate(-50%, -50%) scale(100%); }

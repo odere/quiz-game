@@ -3,10 +3,19 @@
 exports[`components/Life: should be able to change theme 1`] = `
 .c0 {
   background: #66bd38;
-  height: 3em;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
   width: 50%;
+}
+
+.c0:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
 }
 
 <div
@@ -17,10 +26,19 @@ exports[`components/Life: should be able to change theme 1`] = `
 exports[`components/Life: should be able to change theme 2`] = `
 .c0 {
   background: #ff3859;
-  height: 3em;
+  color: #44168b;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0.25em;
+  text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
   width: 50%;
+}
+
+.c0:hover {
+  -webkit-filter: brightness(1.25);
+  filter: brightness(1.25);
 }
 
 <div
