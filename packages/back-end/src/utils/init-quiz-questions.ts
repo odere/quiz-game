@@ -3,10 +3,12 @@ import dotenv from 'dotenv';
 import mongoose, { model } from 'mongoose';
 import path from 'path';
 
-import data from '../data/quiz-questions-example.json';
+import { questions } from '../data/quiz-questions-example';
+import '../models/question.model';
 
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
+// TODO: update script by parsing .env file
 const main = async () => {
 	try {
 		await mongoose.connect(process.env.MONGO_URI || '', {
@@ -17,7 +19,7 @@ const main = async () => {
 		});
 
 		const QuestionModel = model('quiz-questions');
-		QuestionModel.insertMany(data, undefined, (error, docs) => {
+		QuestionModel.insertMany(questions, undefined, (error, docs) => {
 			if (error) {
 				console.error(error);
 				return;

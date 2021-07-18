@@ -46,13 +46,16 @@ const questionRoutes = [
 			tags: ['api'],
 			validate: {
 				payload: Joi.object({
-					answerId: Joi.string().required(),
-					answers: Joi.array()
-						.items({
+					correctAnswerId: Joi.string().required(),
+					answers: Joi.object()
+						.pattern(Joi.string(), {
 							id: Joi.string().required(),
 							text: Joi.string().required(),
 						})
 						.required(),
+					answersIds: Joi.array()
+						.items(Joi.string())
+						.optional(),
 					image: Joi.string(),
 					text: Joi.string().required(),
 				}),
@@ -89,12 +92,14 @@ const questionRoutes = [
 					id: Joi.string(),
 				}),
 				payload: Joi.object({
-					answerId: Joi.string().optional(),
-					answers: Joi.array()
-						.items({
+					correctAnswerId: Joi.string().optional(),
+					answers: Joi.object()
+						.pattern(Joi.string(), {
 							id: Joi.string().optional(),
 							text: Joi.string().optional(),
-						})
+						}),
+					answersIds: Joi.array()
+						.items(Joi.string())
 						.optional(),
 					image: Joi.string().optional(),
 					text: Joi.string().optional(),

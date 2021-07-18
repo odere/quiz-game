@@ -8,7 +8,7 @@
     "compile": "tsc",
     "dev": "ts-node-dev --respawn ./index.ts",
     "format": "prettier --write ./**/*.ts{,x}",
-    "mongo-db:init-data": "ts-node ./utils/init-quiz-questions.ts",
+    "mongo-db:init-data": "ts-node ./src/utils/init-quiz-questions.ts",
     "start": "node dist/index.js"
   },
   "keywords": [
@@ -32,6 +32,7 @@
     "@types/mongoose": "^5.11.97",
     "@types/node": "^15.0.1",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "cross-env": "^7.0.3",
     "eslint": "^7.12.1",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.22.1",

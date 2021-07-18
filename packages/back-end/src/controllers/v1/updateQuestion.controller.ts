@@ -2,7 +2,7 @@ import Boom from '@hapi/boom';
 import Hapi from '@hapi/hapi';
 import { model } from 'mongoose';
 
-import { QuestionPayload } from '../../types';
+import { QuestionPayload } from '../../types/questions.types';
 
 const updateQuestionController = async (
 	request: Hapi.Request,

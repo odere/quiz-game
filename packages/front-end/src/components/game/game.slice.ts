@@ -20,7 +20,7 @@ import {
 } from '../../constants/defaults.constants'
 import getStatistic from './helpers/get-statistic.helper'
 import getNextQuestion from './helpers/get-next-question.helper'
-import getAnsweredQuestion from './helpers/get-answered-quetion-helper'
+import getAnsweredQuestion from './helpers/get-answered-question-helper'
 
 const questionsAdapter = createEntityAdapter<Question>({
 	selectId: (answer: Question) => answer.id,

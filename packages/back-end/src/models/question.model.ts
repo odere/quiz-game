@@ -1,12 +1,13 @@
 import { model, Schema } from 'mongoose';
 
 const QuestionSchema = new Schema({
-	answerId: {
+	correctAnswerId: {
 		type: Schema.Types.String,
 		required: true,
 	},
-	answers: [
-		{
+	answers: {
+		type: Schema.Types.Map,
+		of: {
 			id: {
 				type: Schema.Types.String,
 				required: true,
@@ -16,7 +17,8 @@ const QuestionSchema = new Schema({
 				required: true,
 			},
 		},
-	],
+	},
+	answersIds: [Schema.Types.String],
 	image: Schema.Types.String,
 	text: {
 		type: Schema.Types.String,
@@ -28,12 +30,16 @@ QuestionSchema.set('toJSON', {
 	virtuals: true,
 	versionKey: false,
 	transform: (doc: any, ret: any) => {
+		// eslint-disable-next-line no-param-reassign
 		delete ret._id;
 
-		ret.answers.forEach((item: any) => {
-			delete item._id;
-		});
+		Object.keys(ret.answers).forEach((key) => {
+			// eslint-disable-next-line no-param-reassign
+			delete ret.answers[key]._id
+		})
+		console.log(ret.answers)
 	},
 });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const QuestionModel = model('quiz-questions', QuestionSchema);
