@@ -26,6 +26,7 @@ const Score: React.FC<ScoreProps> = props => {
 			<CloseScoreStyled onClick={onClose} data-testid='close' role='button'>
 				✖️
 			</CloseScoreStyled>
+
 			<HeaderRowStyled>{title}</HeaderRowStyled>
 			<GridStyled>
 				<RowStyled>

@@ -3,7 +3,7 @@
 exports[`components/Button: should be able to change theme 1`] = `
 .c0 {
   background: #240768;
-  border-radius: 0.15em;
+  border-radius: 0.15rem;
   color: white;
   display: inline-block;
   text-align: center;
@@ -27,7 +27,7 @@ exports[`components/Button: should be able to change theme 1`] = `
 exports[`components/Button: should be able to change theme 2`] = `
 .c0 {
   background: #ce7642;
-  border-radius: 0.15em;
+  border-radius: 0.15rem;
   color: white;
   display: inline-block;
   text-align: center;

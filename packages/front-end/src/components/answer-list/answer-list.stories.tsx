@@ -33,38 +33,6 @@ Default.args = {
 			isDisabled: false,
 		},
 	],
-	isDisabled: false,
-	onChange() {
-		console.log('onChange')
-	},
-}
-
-export const Disabled = Template.bind({})
-
-Disabled.args = {
-	answers: [
-		{
-			id: '0',
-			text: 'Stockholm',
-			isDisabled: false,
-		},
-		{
-			id: '1',
-			text: 'Paris',
-			isDisabled: false,
-		},
-		{
-			id: '2',
-			text: 'Berlin',
-			isDisabled: false,
-		},
-		{
-			id: '3',
-			text: 'Tbilisi',
-			isDisabled: false,
-		},
-	],
-	isDisabled: true,
 	onChange() {
 		console.log('onChange')
 	},

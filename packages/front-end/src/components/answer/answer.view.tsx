@@ -20,7 +20,7 @@ const Answer: React.FC<AnswerProps> = props => {
 			isDisabled={isDisabled}
 			isSelected={isSelected}
 		>
-			{text}
+			<span>{text}</span>
 		</StyledAnswer>
 	)
 }

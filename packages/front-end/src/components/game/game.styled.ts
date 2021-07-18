@@ -18,12 +18,12 @@ export const LobbyStyledContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 2em;
+	gap: 2rem;
 	background: ${primary};
 	z-index: 10;
 	position: absolute;
 	transform: ${(props: StyledHiddenContainer) =>
-		props.isHidden ? 'translateY(-100vh)' : 'translateY(0)'};
+		props.isHidden ? 'translateY(-500vh)' : 'translateY(0)'};
 	transition: 500ms;
 `
 LobbyStyledContainer.displayName = 'LobbyStyledContainer'
@@ -33,14 +33,14 @@ export const ScoreStyledContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 2em;
+	gap: 2rem;
 	background: ${primary};
 	z-index: 10;
 	height: 100vh;
 	width: 100vw;
 	position: absolute;
 	transform: ${(props: StyledHiddenContainer) =>
-		props.isHidden ? 'translateY(+100vh)' : 'translateY(0)'};
+		props.isHidden ? 'translateY(+500vh)' : 'translateY(0)'};
 	transition: 500ms;
 `
 ScoreStyledContainer.displayName = 'ScoreStyledContainer'
@@ -58,7 +58,7 @@ export const QuestionStyledContainer = styled.div`
 	width: 100vw;
 	position: absolute;
 	transform: ${(props: StyledHiddenContainer) =>
-		props.isHidden ? 'translateX(-100vw)' : 'translateX(0)'};
+		props.isHidden ? 'translateX(-500vw)' : 'translateX(0)'};
 	transition: 500ms;
 `
 QuestionStyledContainer.displayName = 'QuestionStyledContainer'

@@ -1,53 +1,38 @@
 import { useState, useRef, useEffect } from 'react'
-import { BehaviorSubject, interval } from 'rxjs'
-import { startWith, scan, takeWhile, switchMapTo } from 'rxjs/operators'
 
-export interface UseTimerProps {
-	deps: any[]
+interface UseTimerProps {
+	delay: number
+	isRunning: boolean
 	onFinish(): void
 	onTick(): void
-	remainingTime: number
-	start: boolean
+	timeOut: number
 }
 
-// TODO: add test
-const useTimer = (props: UseTimerProps): number => {
-	const { deps, onFinish, onTick, remainingTime, start } = props
-	const [remaining, setRemaining] = useState(remainingTime)
-	let { current: subject } = useRef<BehaviorSubject<number> | null>(null)
-
-	const countdown$ = interval(1000).pipe(
-		// eslint-disable-next-line no-param-reassign
-		scan((acc, _) => --acc, remainingTime),
-		startWith(remainingTime),
-		takeWhile(val => val >= -1)
-	)
+const useTimer = (props: UseTimerProps) => {
+	const { delay, isRunning, onFinish, onTick, timeOut } = props
+	const intervalId = useRef<number>()
+	const [remaining, setRemaining] = useState(timeOut)
 
 	useEffect(() => {
-		subject = new BehaviorSubject(remainingTime)
+		const onFinishHandle = () => {
+			onFinish()
+			setRemaining(timeOut)
+		}
 
-		if (start) {
-			subject.pipe(switchMapTo(countdown$)).subscribe(item => {
-				if (item >= 0) {
-					setRemaining(item)
-					onTick()
-				} else {
-					setRemaining(remainingTime)
-					onFinish()
-				}
-			})
+		const onTickHandle = () => {
+			setRemaining(remaining - 1)
+			onTick()
+		}
+
+		if (isRunning) {
+			// @ts-ignore
+			intervalId.current = setInterval(onTickHandle, delay)
+
+			return () => clearInterval(intervalId.current)
 		} else {
-			subject.unsubscribe()
+			onFinishHandle()
 		}
-
-		return () => {
-			if (subject) {
-				subject.unsubscribe()
-			}
-		}
-	}, [...deps, start])
-
-	return remaining
+	}, [remaining, isRunning])
 }
 
 export default useTimer

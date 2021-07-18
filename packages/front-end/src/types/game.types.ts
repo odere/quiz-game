@@ -16,6 +16,7 @@ export enum GameStatus {
 
 export interface Game {
 	currentQuestion: Question | null
+	currentQuestionNumber: number | null
 	fiftyFifty: boolean
 	gameStatus: GameStatus
 	playerName: string

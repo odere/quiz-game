@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         background: ${primary};
         margin: 0;
         color: white;
-        font-size: 1.25em;
+        font-size: 1.25rem;
         overflow: hidden;
     }
 

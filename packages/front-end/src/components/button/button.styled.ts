@@ -13,15 +13,15 @@ export const StyledButton = styled.button`
 	background: transparent;
 	border: none;
 	color: inherit;
-	font-size: 1.5em;
-	padding: 0.5em;
-	min-width: 5em;
+	font-size: 1.25rem;
+	padding: 0.5rem;
+	min-width: 5rem;
 `
 
 export const StyledButtonContainer = styled.div`
 	background: ${(props: ButtonStyledProps) =>
 		props.primary ? primaryDark : secondary};
-	border-radius: 0.15em;
+	border-radius: 0.15rem;
 	color: white;
 	display: inline-block;
 	text-align: center;

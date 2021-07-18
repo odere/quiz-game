@@ -17,7 +17,7 @@ describe('components/LifeLine:', () => {
 			.toJSON()
 		expect(lifeLineDefault).toMatchSnapshot()
 		const halfLife = renderer
-			.create(<LifeLine fiftyFifty plusTenSec={false}  {...mockedProps}  />)
+			.create(<LifeLine fiftyFifty plusTenSec={false} {...mockedProps} />)
 			.toJSON()
 		expect(halfLife).toMatchSnapshot()
 		const halfLifeInverted = renderer

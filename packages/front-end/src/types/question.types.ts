@@ -15,4 +15,5 @@ export interface Question extends QuestionPayload {
 export interface AnsweredQuestion extends Question {
 	answered: boolean
 	answeredTime: number
+	hasExtraTime: boolean
 }

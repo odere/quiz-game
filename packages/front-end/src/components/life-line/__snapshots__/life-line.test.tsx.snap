@@ -5,8 +5,8 @@ exports[`components/LifeLine: should be able to show life states 1`] = `
   background: #66bd38;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -23,8 +23,8 @@ exports[`components/LifeLine: should be able to show life states 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 1.5em;
-  gap: 0.25em;
+  min-height: 1.5rem;
+  gap: 0.25rem;
 }
 
 <div
@@ -56,8 +56,8 @@ exports[`components/LifeLine: should be able to show life states 2`] = `
   background: #66bd38;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -73,8 +73,8 @@ exports[`components/LifeLine: should be able to show life states 2`] = `
   background: #ff3859;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -91,8 +91,8 @@ exports[`components/LifeLine: should be able to show life states 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 1.5em;
-  gap: 0.25em;
+  min-height: 1.5rem;
+  gap: 0.25rem;
 }
 
 <div
@@ -124,8 +124,8 @@ exports[`components/LifeLine: should be able to show life states 3`] = `
   background: #66bd38;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -141,8 +141,8 @@ exports[`components/LifeLine: should be able to show life states 3`] = `
   background: #ff3859;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -159,8 +159,8 @@ exports[`components/LifeLine: should be able to show life states 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 1.5em;
-  gap: 0.25em;
+  min-height: 1.5rem;
+  gap: 0.25rem;
 }
 
 <div
@@ -192,8 +192,8 @@ exports[`components/LifeLine: should be able to show life states 4`] = `
   background: #ff3859;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -210,8 +210,8 @@ exports[`components/LifeLine: should be able to show life states 4`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 1.5em;
-  gap: 0.25em;
+  min-height: 1.5rem;
+  gap: 0.25rem;
 }
 
 <div

@@ -5,8 +5,8 @@ exports[`components/Life: should be able to change theme 1`] = `
   background: #66bd38;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -28,8 +28,8 @@ exports[`components/Life: should be able to change theme 2`] = `
   background: #ff3859;
   color: #44168b;
   font-weight: 600;
-  line-height: 1.5em;
-  padding: 0.25em;
+  line-height: 1.5rem;
+  padding: 0.25rem;
   text-align: center;
   -webkit-transition: 200ms;
   transition: 200ms;

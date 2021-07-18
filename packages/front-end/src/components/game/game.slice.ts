@@ -9,7 +9,7 @@ import {
 // FIXME: replace by fetching data
 import { questions } from './quiz-questions-example'
 
-import { Question, AnsweredQuestion } from '../../types/question.types'
+import { Question } from '../../types/question.types'
 import { Game, GameStatus } from '../../types/game.types'
 import { RootState } from '../../store'
 import shuffleArray from '../../utils/shuffle-array'
@@ -18,6 +18,9 @@ import {
 	REMAINING_TIME,
 	QUESTIONS_COUNT,
 } from '../../constants/defaults.constants'
+import getStatistic from './helpers/get-statistic.helper'
+import getNextQuestion from './helpers/get-next-question.helper'
+import getAnsweredQuestion from './helpers/get-answered-quetion-helper'
 
 const questionsAdapter = createEntityAdapter<Question>({
 	selectId: (answer: Question) => answer.id,
@@ -30,6 +33,7 @@ export interface GameState extends Game {}
 
 export const initialGameState: GameState = {
 	currentQuestion: null,
+	currentQuestionNumber: null,
 	fiftyFifty: true,
 	gameStatus: GameStatus.pending,
 	playerName: '',
@@ -48,6 +52,7 @@ export const gameSlice = createSlice({
 	reducers: {
 		onEndGame(state: GameState) {
 			state.gameStatus = GameStatus.finished
+			state.statistic = getStatistic({ state })
 		},
 		onFiftyFifty(state: GameState) {
 			state.fiftyFifty = false
@@ -56,7 +61,7 @@ export const gameSlice = createSlice({
 				// It is always 4 answers
 				const correctAnswerId = state.currentQuestion.correctAnswerId
 
-				shuffleArray(state.currentQuestion.answersIds)
+				state.currentQuestion.answersIds
 					.filter(id => id !== correctAnswerId)
 					.slice(0, 2)
 					.forEach(id => {
@@ -64,83 +69,66 @@ export const gameSlice = createSlice({
 					})
 			}
 		},
-		onInitGame(state: GameState) {
+		onResetGame(state: GameState) {
+			return {
+				...initialGameState,
+				playerName: state.playerName,
+			}
+		},
+		onFetchQuestion(state: GameState) {
 			// TODO: redux-thunk
 			// TODO: encrypt data
 			// FIXME: replace by fetching data
-			const questionsPoolItems: Question[] = questions
+			const questionsPoolItems: Question[] = shuffleArray(questions)
 
 			if (questionsPoolItems.length > 0) {
-				state.currentQuestion = questionsPoolItems[0]
 				state.questionsPool = questionsAdapter.setAll(
 					state.questionsPool,
 					questionsPoolItems
 				)
 			}
-
-			state.gameStatus = GameStatus.pending
-			state.questions = []
-			state.statistic = EMPTY_STATISTIC
-			state.fiftyFifty = true
-			state.plusTenSec = true
 		},
 		onNextQuestion(
 			state: GameState,
 			action: PayloadAction<{ selectedId: string }>
 		) {
 			const { selectedId } = action.payload
-			const questionCount = state.questions.length - 1
-			const isNotLastQuestion = questionCount < state.questionsCount
+			const isNotLastQuestion = state.questions.length < state.questionsCount
+			const answeredQuestion = getAnsweredQuestion({ state, selectedId })
 
-			if (isNotLastQuestion && state.currentQuestion) {
-				const answeredQuestion: AnsweredQuestion = {
-					...state.currentQuestion,
-					answered: selectedId === state.currentQuestion.correctAnswerId,
-					answeredTime: state.remainingTime,
-				}
+			if (isNotLastQuestion) {
+				state.currentQuestionNumber = (state.currentQuestionNumber as number) + 1
+				state.currentQuestion = getNextQuestion({
+					state,
+					questionCount: state.questions.length,
+					selectIds,
+					selectById,
+				})
+				state.remainingTime = REMAINING_TIME
 
-				const nextId = selectIds(state)[questionCount + 1]
-				const nextQuestion = selectById(state, nextId)
-
-				if (nextQuestion) {
-					state.currentQuestion = nextQuestion
-				}
-
-				state.questions.push(answeredQuestion)
-			} else {
-				state.gameStatus = GameStatus.finished
-				state.statistic = {
-					averageTimePerQuestion:
-						state.questions.reduce((acc, next) => acc + next.answeredTime, 0) /
-						questionCount,
-					correctAnswers: state.questions.reduce(
-						(acc, next) => (next.answered ? acc + 1 : acc),
-						0
-					),
-					quickestTimePerQuestion: Math.min(
-						...state.questions.map(item => item.answeredTime)
-					),
-					slowestTimePerQuestion: Math.max(
-						...state.questions.map(item => item.answeredTime)
-					),
-					unansweredAnswers: state.questions.reduce(
-						(acc, next) => (!next.answered ? acc + 1 : acc),
-						0
-					),
+				if (answeredQuestion) {
+					state.questions.push(answeredQuestion)
 				}
 			}
-
-			state.remainingTime = REMAINING_TIME
 		},
 		onPlusTenSeconds(state: GameState) {
-			state.remainingTime = state.remainingTime + 10
-			state.plusTenSec = false
+			if (state.plusTenSec) {
+				state.remainingTime = state.remainingTime + 10
+				state.plusTenSec = false
+			}
 		},
 		onSetPlayerName(state: GameState, action: PayloadAction<{ name: string }>) {
 			state.playerName = action.payload.name
 		},
 		onStartGame(state: GameState) {
 			state.gameStatus = GameStatus.inProgress
+			state.currentQuestionNumber = 0
+			state.currentQuestion = getNextQuestion({
+				state,
+				questionCount: state.questions.length,
+				selectIds,
+				selectById,
+			})
 			state.questionsPool.ids = shuffleArray(state.questionsPool.ids)
 		},
 		onTickTimer(state: GameState) {
@@ -154,9 +142,10 @@ export const gameSlice = createSlice({
 const {
 	onEndGame,
 	onFiftyFifty,
-	onInitGame,
+	onFetchQuestion,
 	onNextQuestion,
 	onPlusTenSeconds,
+	onResetGame,
 	onSetPlayerName,
 	onStartGame,
 	onTickTimer,
@@ -168,11 +157,12 @@ export const useDispatchedActions = () => {
 	return {
 		onEndGame: () => dispatch(onEndGame()),
 		onFiftyFifty: () => dispatch(onFiftyFifty()),
-		onInitGame: () => dispatch(onInitGame()),
+		onFetchQuestion: () => dispatch(onFetchQuestion()),
 		onNextQuestion: (selectedId: string) =>
 			dispatch(onNextQuestion({ selectedId })),
 		onPlusTenSeconds: () => dispatch(onPlusTenSeconds()),
 		onSetPlayerName: (name: string) => dispatch(onSetPlayerName({ name })),
+		onResetGame: () => dispatch(onResetGame()),
 		onStartGame: () => dispatch(onStartGame()),
 		onTickTimer: () => dispatch(onTickTimer()),
 	}

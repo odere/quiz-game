@@ -10,13 +10,13 @@ exports[`components/Timer: should be Clickable 1`] = `
   animation-name: ePQddc;
   background: #45a2e5;
   border-radius: 50%;
-  border: 0.1em solid #44168b;
+  border: 0.1rem solid #44168b;
   color: white;
   display: inline-block;
-  font-size: 2em;
+  font-size: 2rem;
   height: 75%;
   left: 50%;
-  line-height: 2.2em;
+  line-height: 4.2rem;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -30,8 +30,8 @@ exports[`components/Timer: should be Clickable 1`] = `
 
 .c0 {
   position: relative;
-  width: 6em;
-  height: 6em;
+  width: 6rem;
+  height: 6rem;
 }
 
 <div
@@ -55,13 +55,13 @@ exports[`components/Timer: should be Clickable 2`] = `
   animation-name: ePQddc;
   background: #45a2e5;
   border-radius: 50%;
-  border: 0.1em solid #44168b;
+  border: 0.1rem solid #44168b;
   color: white;
   display: inline-block;
-  font-size: 2em;
+  font-size: 2rem;
   height: 75%;
   left: 50%;
-  line-height: 2.2em;
+  line-height: 4.2rem;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -75,8 +75,8 @@ exports[`components/Timer: should be Clickable 2`] = `
 
 .c0 {
   position: relative;
-  width: 6em;
-  height: 6em;
+  width: 6rem;
+  height: 6rem;
 }
 
 <div
@@ -100,13 +100,13 @@ exports[`components/Timer: should be Clickable 3`] = `
   animation-name: ePQddc;
   background: rgba(255,56,89,.50);
   border-radius: 50%;
-  border: 0.1em solid #ff3859;
+  border: 0.1rem solid #ff3859;
   color: white;
   display: inline-block;
-  font-size: 2em;
+  font-size: 2rem;
   height: 75%;
   left: 50%;
-  line-height: 2.2em;
+  line-height: 4.2rem;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -120,8 +120,8 @@ exports[`components/Timer: should be Clickable 3`] = `
 
 .c0 {
   position: relative;
-  width: 6em;
-  height: 6em;
+  width: 6rem;
+  height: 6rem;
 }
 
 <div
@@ -145,13 +145,13 @@ exports[`components/Timer: should be Clickable 4`] = `
   animation-name: ePQddc;
   background: #45a2e5;
   border-radius: 50%;
-  border: 0.1em solid #44168b;
+  border: 0.1rem solid #44168b;
   color: white;
   display: inline-block;
-  font-size: 2em;
+  font-size: 2rem;
   height: 75%;
   left: 50%;
-  line-height: 2.2em;
+  line-height: 4.2rem;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -165,8 +165,8 @@ exports[`components/Timer: should be Clickable 4`] = `
 
 .c0 {
   position: relative;
-  width: 6em;
-  height: 6em;
+  width: 6rem;
+  height: 6rem;
 }
 
 <div

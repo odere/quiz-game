@@ -19,25 +19,29 @@ const Game: React.FC<GameProps> = () => {
 	const gameState = useGameState()
 	const {
 		currentQuestion,
+		currentQuestionNumber,
 		fiftyFifty,
 		gameStatus,
 		playerName,
 		plusTenSec,
+		questionsCount,
 		remainingTime,
 		statistic,
 	} = gameState
 	const {
+		onEndGame,
 		onFiftyFifty,
-		onInitGame,
+		onFetchQuestion,
 		onNextQuestion,
 		onPlusTenSeconds,
+		onResetGame,
 		onSetPlayerName,
 		onStartGame,
 		onTickTimer,
 	} = useDispatchedActions()
 
 	useEffect(() => {
-		onInitGame()
+		onInitGameHandler()
 	}, [])
 
 	const onStartHandler = () => {
@@ -46,10 +50,47 @@ const Game: React.FC<GameProps> = () => {
 		}
 	}
 
+	const onInitGameHandler = () => {
+		onResetGame()
+		onFetchQuestion()
+	}
+
+	const onNextQuestionHandler = (selectedId: string = '') => {
+		const isGameFinished =
+			currentQuestionNumber === questionsCount &&
+			gameStatus !== GameStatus.finished
+
+		if (isGameFinished) {
+			onEndGame()
+
+			return
+		}
+
+		if (gameStatus !== GameStatus.pending) {
+			onNextQuestion(selectedId)
+		}
+	}
+
+	const onPlusTenSecondsHandler = () => {
+		if (plusTenSec) {
+			onPlusTenSeconds()
+		}
+	}
+
+	const onFiftyFiftyHandler = () => {
+		if (fiftyFifty) {
+			onFiftyFifty()
+		}
+	}
+
 	return (
 		<GameStyledContainer>
 			<LobbyStyledContainer isHidden={gameStatus !== GameStatus.pending}>
-				<Input label='User name' onChange={onSetPlayerName} />
+				<Input
+					label='User name'
+					onChange={onSetPlayerName}
+					initValue={playerName}
+				/>
 				<Button
 					label='Start'
 					primary={false}
@@ -62,14 +103,15 @@ const Game: React.FC<GameProps> = () => {
 				<QuestionStyledContainer isHidden={gameStatus !== GameStatus.inProgress}>
 					<LifeLine
 						fiftyFifty={fiftyFifty}
-						onFiftyFifty={onFiftyFifty}
-						onPlusTenSeconds={onPlusTenSeconds}
+						onFiftyFifty={onFiftyFiftyHandler}
+						onPlusTenSeconds={onPlusTenSecondsHandler}
 						plusTenSec={plusTenSec}
 					/>
 					<Question
-						question={currentQuestion}
-						onFinish={onNextQuestion}
+						gameStatus={gameStatus}
+						onAnswerQuestion={onNextQuestionHandler}
 						onTick={onTickTimer}
+						question={currentQuestion}
 						remainingTime={remainingTime}
 					/>
 				</QuestionStyledContainer>
@@ -79,7 +121,7 @@ const Game: React.FC<GameProps> = () => {
 				<Score
 					{...statistic}
 					title={`${playerName} Results:`}
-					onClose={onInitGame}
+					onClose={onInitGameHandler}
 				/>
 			</ScoreStyledContainer>
 		</GameStyledContainer>

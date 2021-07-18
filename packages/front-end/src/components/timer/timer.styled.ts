@@ -29,15 +29,15 @@ export const StyledTimer = styled.div`
 	background: ${(props: TimerStyledProps) =>
 		props.isInfo ? yellow50 : props.isWarning || props.isFinished ? red50 : blue};
 	border-radius: 50%;
-	border: 0.1em solid
+	border: 0.1rem solid
 		${(props: TimerStyledProps) =>
 			props.isInfo ? yellow : props.isWarning || props.isFinished ? red : primary};
 	color: white;
 	display: inline-block;
-	font-size: 2em;
+	font-size: 2rem;
 	height: 75%;
 	left: 50%;
-	line-height: 2.2em;
+	line-height: 4.2rem;
 	position: absolute;
 	text-align: center;
 	top: 50%;
@@ -48,6 +48,6 @@ export const StyledTimer = styled.div`
 
 export const StyledTimerContainer = styled.div`
 	position: relative;
-	width: 6em;
-	height: 6em;
+	width: 6rem;
+	height: 6rem;
 `

@@ -15,8 +15,12 @@ export const HalfLife = Template.bind({})
 HalfLife.args = {
 	fiftyFifty: false,
 	plusTenSec: true,
-	onFiftyFifty() { console.log('onFiftyFifty') },
-	onPlusTenSeconds() { console.log('onFiftyFifty') },
+	onFiftyFifty() {
+		console.log('onFiftyFifty')
+	},
+	onPlusTenSeconds() {
+		console.log('onFiftyFifty')
+	},
 }
 
 export const NoLife = Template.bind({})
@@ -24,8 +28,12 @@ export const NoLife = Template.bind({})
 NoLife.args = {
 	fiftyFifty: false,
 	plusTenSec: false,
-	onFiftyFifty() { console.log('onFiftyFifty') },
-	onPlusTenSeconds() { console.log('onFiftyFifty') },
+	onFiftyFifty() {
+		console.log('onFiftyFifty')
+	},
+	onPlusTenSeconds() {
+		console.log('onFiftyFifty')
+	},
 }
 
 export default {

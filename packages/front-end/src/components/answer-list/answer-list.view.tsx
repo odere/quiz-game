@@ -6,7 +6,7 @@ import { AnswerListStyled } from './answer-list.styled'
 import { COLOR_ARRAY } from './answer-list.constants'
 
 const AnswerList: React.FC<AnswerListProps> = props => {
-	const { answers, onChange, isDisabled } = props
+	const { answers, onChange } = props
 
 	const [extendedAnswers, setExtendedAnswers] = useState<
 		AnswerComponentsProps[]
@@ -29,7 +29,7 @@ const AnswerList: React.FC<AnswerListProps> = props => {
 	}, [answers])
 
 	return (
-		<AnswerListStyled isDisabled={isDisabled}>
+		<AnswerListStyled>
 			{extendedAnswers.map(answerItem => (
 				<Answer key={answerItem.id} {...answerItem} />
 			))}

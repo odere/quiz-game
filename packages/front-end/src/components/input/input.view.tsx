@@ -10,10 +10,14 @@ import {
 import { InputProps } from './input.types'
 
 const Input: React.FC<InputProps> = props => {
-	const { label, onChange } = props
+	const { label, initValue = '', onChange } = props
 
 	const subjectRef = useRef(new BehaviorSubject(''))
-	const [value, setValue] = useState('')
+	const [value, setValue] = useState(initValue)
+
+	useEffect(() => {
+		setValue(initValue)
+	}, [initValue])
 
 	useEffect(() => {
 		subjectRef.current.pipe(debounceTime(200)).subscribe((inputValue: string) => {
